@@ -1,0 +1,2 @@
+class Role < Taxonamy
+end
