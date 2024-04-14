@@ -80,5 +80,5 @@ test:
 production:
   <<: *default
   database: sisyphus_production
-  username: sisyphus
+  username: ubuntu
   password: <%= ENV["SISYPHUS_DATABASE_PASSWORD"] %>

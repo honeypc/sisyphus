@@ -1,16 +1,14 @@
-import { Controller } from "@hotwired/stimulus"
-import React, { useState } from "react";
+import ApplicationController from "./application_controller"
+import React from "react";
 import ReactDOM from "react-dom/client";
-import { DataTable } from "../components/datatable";
-import axios from "axios";
+import { DataTable } from "@/components/datatable";
+import { Provider } from "@/components/admin";
 
 // Connects to data-controller="react"
-export default class extends Controller {
+export default class extends ApplicationController {
   connect() {
-    console.log("Connected react app")
-    const root = ReactDOM.createRoot(document.getElementById("app"));
-    root.render(
-      <DataTable />
+    this.render(
+      <Provider><DataTable /></Provider>
     )
   }
 }

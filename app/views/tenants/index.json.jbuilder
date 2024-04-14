@@ -4,3 +4,4 @@ json.rows do
     json.extract! tenant, :id, :name, :domain
   end
 end
+json.partial! "shared/pagination"

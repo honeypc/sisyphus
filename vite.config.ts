@@ -1,7 +1,9 @@
 // vite.config.ts
 import {defineConfig} from 'vite'
+import react from '@vitejs/plugin-react'
 import ViteRails from "vite-plugin-rails"
 import WindiCSS from 'vite-plugin-windicss'
+import path from 'path'
 
 export default defineConfig({
     clearScreen: false,
@@ -19,5 +21,10 @@ export default defineConfig({
         }
       }),
     ],
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './app/javascript'),
+      }
+    }
   }
 )
